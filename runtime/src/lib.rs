@@ -143,6 +143,7 @@ impl pallet_sudo::Trait for Runtime {
 impl kitty::Trait for Runtime {
 	type RandomnessSource = CollectiveFlip;
 	type Event = Event;
+	type Currency = Balances;
 }
 pub type CollectiveFlip = pallet_randomness_collective_flip::Module<Runtime>;
 impl frame_system::Trait for Runtime {
